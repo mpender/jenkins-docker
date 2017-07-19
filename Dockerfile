@@ -8,9 +8,9 @@ RUN wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenki
 
 RUN rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 
-RUN sudo yum install jenkins
+RUN yum install jenkins -y
 
-RUN sudo yum install java -y
+RUN yum install java -y
 
 RUN service jenkins start
 
